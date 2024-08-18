@@ -24,25 +24,25 @@ clone this repo and `cd` into it and use `cargo run` to run it
 RUST_ENV=debug cargo run
 ```
 
+and `cargo test` to run tests
+
+```bash
+RUST_ENV=testing cargo test
+```
+
+### Using `Makefile`
+
 alternatively, if on Linux, you can use `make` to run it
 
 ```bash
-make install
-
 make run
 ```
 
-## Build client Typescript code
-
-move into `client/js` folder and use `npm` to build the `main.ts` file holding client code
+and to test it
 
 ```bash
-cd client/js
-
-npm run build
+make test
 ```
-
-now you can run the application with `cargo run` from project root folder
 
 ## License
 
