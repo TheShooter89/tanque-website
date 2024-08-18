@@ -2,7 +2,19 @@
 
 # tanque-website
 
-small web-app for my personal website, written in Rust, powered by [tokio](https://github.com/tokio-rs/tokio) runtime, [axum](https://github.com/tokio-rs/axum) webframework, [maud](https://github.com/lambda-fairy/maud) templating macro and [htmx](https://github.com/bigskysoftware/htmx)
+small web-app for my personal website, written in Rust, powered by [tokio](https://github.com/tokio-rs/tokio) runtime, [axum](https://github.com/tokio-rs/axum) webframework, [maud](https://github.com/lambda-fairy/maud) templating macro and [htmx](https://github.com/bigskysoftware/htmx), deployed using [Docker](https://www.docker.com/)
+
+crate structure plus some other ideas & patterns have been heavily inspired by:
+
+- [Axum-Rust-Api-Template](https://github.com/thanipro/Axum-Rust-Rest-Api-Template/) - crate structure and modules organization
+
+- [A Practical Guide To Containerize Your Rust Application With Docker](https://itnext.io/a-practical-guide-to-containerize-your-rust-application-with-docker-77e8a391b4a8) - basics of Rust containerization
+
+- [Rust Dockerfile Boilerplate](https://peterprototypes.com/blog/rust-dockerfile-boilerplate/) - lightweight multi-stage Docker builds
+
+- [rust-axum-sqlx-htmx-boilerplate](https://github.com/scottjmaddox/rust-axum-sqlx-htmx-boilerplate/) repo - simple boilerplate using both [sqlx](https://github.com/launchbadge/sqlx) and [htmx](https://github.com/bigskysoftware/htmx)
+
+
 
 ## Usage/Examples
 
