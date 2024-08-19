@@ -44,6 +44,32 @@ and to test it
 make test
 ```
 
+### Hot-realoading
+
+you can watch for changes live as you develop
+
+```bash
+RUST_ENV=development cargo watch -x run
+```
+
+and for tests also
+
+```bash
+RUST_ENV=testing cargo watch -x test
+```
+
+or using `Makefile`
+
+```bash
+make watch
+```
+
+and
+
+```bash
+make watch-test
+```
+
 ## License
 
 [GPL-3.0](https://choosealicense.com/licenses/gpl-3.0/)
