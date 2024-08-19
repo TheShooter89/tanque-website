@@ -2,7 +2,8 @@ pub fn add(left: usize, right: usize) -> usize {
     left + right
 }
 
-fn main() {
+#[tokio::main]
+async fn main() {
     let count = add(2, 3);
 
     for i in 1..=count {
