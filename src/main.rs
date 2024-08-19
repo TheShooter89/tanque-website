@@ -111,7 +111,6 @@ impl Display for AppSplashMessage {
 #[tokio::main]
 async fn main() {
     let message = AppSplashMessage::from_title("TANQUE WEBSITE - WELCOME");
-    let message = AppSplashMessage::with_padding_y("TANQUE WEBSITE - WELCOME", 1);
 
     println!("{}", message.to_string())
 }
