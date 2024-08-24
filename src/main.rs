@@ -4,7 +4,7 @@ use std::fmt::Display;
 extern crate lazy_static;
 
 mod settings;
-use settings::{Settings, SETTINGS};
+use settings::SETTINGS;
 
 mod utils;
 use utils::*;
