@@ -1,5 +1,3 @@
-use std::fmt::Display;
-
 #[macro_use]
 extern crate lazy_static;
 
