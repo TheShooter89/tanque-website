@@ -31,6 +31,10 @@ impl Settings {
     }
 }
 
+lazy_static! {
+    pub static ref SETTINGS: Settings = Settings::load().expect("config must be properly loaded");
+}
+
 #[cfg(test)]
 mod test {
     use super::*;

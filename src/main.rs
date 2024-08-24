@@ -1,7 +1,10 @@
 use std::fmt::Display;
 
+#[macro_use]
+extern crate lazy_static;
+
 mod settings;
-use settings::Settings;
+use settings::{Settings, SETTINGS};
 
 mod utils;
 use utils::*;
@@ -11,9 +14,6 @@ async fn main() {
     let message = AppSplashMessage::from_title("TANQUE WEBSITE - WELCOME");
 
     println!("{}", message.to_string());
-    // std::env::set_var("RUST_ENV", "default");
 
-    let settings = Settings::load().unwrap();
-
-    println!("SETTINGS LOADED:\n{:?}", settings)
+    println!("SETTINGS LOADED:\n{:?}", *SETTINGS)
 }
