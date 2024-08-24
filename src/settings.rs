@@ -2,13 +2,16 @@ use config::{Config, ConfigError, File};
 use dotenvy::dotenv;
 use serde::{Deserialize, Serialize};
 
+mod log;
+use log::Log;
+
 const DEAFULT_CONFIG_FILE: &str = "configs/default";
 const CONFIG_FILE_PREFIX: &str = "configs/";
 
 #[derive(Debug, Serialize, Deserialize, PartialEq, Eq, Clone)]
 pub struct Settings {
     pub env: String,
-    pub log: String,
+    pub log: Log,
     pub host: String,
     pub port: u16,
 }
@@ -42,7 +45,7 @@ mod test {
 
         assert_eq!(default_settings.env, "development");
         assert_eq!(default_settings.host, "localhost");
-        assert_eq!(default_settings.log, "warn");
+        assert_eq!(default_settings.log, Log::Warn);
         assert_eq!(default_settings.port, 5000);
     }
 
@@ -55,7 +58,7 @@ mod test {
 
         assert_eq!(development_settings.env, "development");
         assert_eq!(development_settings.host, "0.0.0.0");
-        assert_eq!(development_settings.log, "debug");
+        assert_eq!(development_settings.log, Log::Debug);
         assert_eq!(development_settings.port, 5000);
     }
 
@@ -70,7 +73,7 @@ mod test {
 
         assert_eq!(production_settings.env, "production");
         assert_eq!(production_settings.host, "0.0.0.0");
-        assert_eq!(production_settings.log, "error");
+        assert_eq!(production_settings.log, Log::Error);
         assert_eq!(production_settings.port, 5000);
     }
 
@@ -83,7 +86,7 @@ mod test {
 
         assert_eq!(testing_settings.env, "testing");
         assert_eq!(testing_settings.host, "0.0.0.0");
-        assert_eq!(testing_settings.log, "debug");
+        assert_eq!(testing_settings.log, Log::Debug);
         assert_eq!(testing_settings.port, 5000);
     }
 }
